@@ -1,6 +1,7 @@
-<?php
 /**
- * @copyright Copyright (c) 2017 Lukas Reschke <lukas@statuscode.ch>
+ * @copyright Copyright (c) 2018 Roeland Jago Douma <roeland@famdouma.nl>
+ *
+ * @author Roeland Jago Douma <roeland@famdouma.nl>
  *
  * @license GNU AGPL version 3 or any later version
  *
@@ -15,36 +16,20 @@
  * GNU Affero General Public License for more details.
  *
  * You should have received a copy of the GNU Affero General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  *
  */
 
-return [
-	'routes' => [
-		[
-			'name' => 'Settings#addClient',
-			'url' => '/clients',
-			'verb' => 'POST',
-		],
-		[
-			'name' => 'Settings#getClients',
-			'url' => '/clients',
-			'verb' => 'GET',
-		],
-		[
-			'name' => 'Settings#deleteClient',
-			'url' => '/clients/{id}',
-			'verb' => 'DELETE'
-		],
-		[
-			'name' => 'LoginRedirector#authorize',
-			'url' => '/authorize',
-			'verb' => 'GET',
-		],
-		[
-			'name' => 'OauthApi#getToken',
-			'url' => '/api/v1/token',
-			'verb' => 'POST'
-		],
-	],
-];
+import Vue from 'vue';
+import App from './App.vue';
+
+Vue.prototype.t = t;
+Vue.prototype.oc_defaults = oc_defaults;
+Vue.prototype.OC = OC;
+
+const app = new Vue({
+	render: h => h(App)
+}).$mount('#oauth2');
+
+export { app };
+
