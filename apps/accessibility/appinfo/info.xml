@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<info>
+    <id>accessibility</id>
+    <name>Accessibility</name>
+    <summary>Accessibility options for nextcloud</summary>
+    <description><![CDATA[Provides multiple accessibilities options to ease your use of nextcloud]]></description>
+    <version>1.0.0</version>
+    <licence>AGPL</licence>
+    <author>John Molakvoæ</author>
+    <namespace>Accessibility</namespace>
+    <category>accessibility</category>
+    <dependencies>
+        <nextcloud min-version="14" max-version="14"/>
+    </dependencies>
+    <default_enable/>
+    <settings>
+        <personal>OCA\Accessibility\Settings\Personal</personal>
+        <personal-section>OCA\Accessibility\Settings\PersonalSection</personal-section>
+    </settings>
+</info>
